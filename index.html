@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Summarization</title>
+</head>
+<body>
+    <h1>Text Summarization with BART-large-CNN</h1>
+    <form action="/summarize" method="post">
+        <label for="input_text">Enter text to summarize:</label><br>
+        <textarea id="input_text" name="input_text" rows="10" cols="80">{{ input_text }}</textarea><br><br>
+        <input type="submit" value="Summarize">
+    </form>
+    <br>
+    {% if summary %}
+        <h2>Generated Summary:</h2>
+        <p>{{ summary }}</p>
+    {% endif %}
+</body>
+</html>
